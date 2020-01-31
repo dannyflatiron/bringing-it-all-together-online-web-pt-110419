@@ -48,7 +48,7 @@ attr_accessor :name, :breed, :id
     id = row[0]
     name = row[1]
     breed = row[2]
-    self.new(id: id, name: name, grade: grade)
+    self.new(id: id, name: name, breed: breed)
   end
 
   def update
