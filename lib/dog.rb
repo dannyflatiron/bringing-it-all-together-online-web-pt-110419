@@ -40,6 +40,7 @@ attr_accessor :name, :breed, :id
 
   def self.create(name:, breed:)
     dog = self.new(name: name, breed: breed)
-    
+    dog.save
+    dog
   end
 end
