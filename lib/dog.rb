@@ -10,10 +10,10 @@ attr_accessor :name, :breed, :id
 
   def self.create_table
     sql =  <<-SQL
-       CREATE TABLE IF NOT EXISTS dog (
+       CREATE TABLE IF NOT EXISTS dogs (
+         id INTEGER PRIMARY KEY,
          name TEXT,
          breed TEXT,
-         id INTEGER PRIMARY KEY
          )
          SQL
     DB[:conn].execute(sql)
