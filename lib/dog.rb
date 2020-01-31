@@ -2,7 +2,7 @@ class Dog
 
 attr_accessor :name, :breed, :id
 
-  def initialize(name:, breed:, id: nil)
+  def initialize(id: nil, name:, breed:)
     @name = name
     @breed = breed
     @id = id
@@ -38,8 +38,8 @@ attr_accessor :name, :breed, :id
   self
   end
 
-  def self.create(name:, breed:)
-    dog = self.new(name:, breed:)
+  def self.create(id:, name:, breed:)
+    dog = self.new(id:, name:, breed:)
 
   end
 end
