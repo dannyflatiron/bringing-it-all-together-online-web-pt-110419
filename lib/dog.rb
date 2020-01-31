@@ -44,6 +44,13 @@ attr_accessor :name, :breed, :id
     dog
   end
 
+  def self.new_from_db
+    id = row[0]
+    name = row[1]
+    grade = row[2]
+    self.new(name, grade, id)
+  end
+
   def update
     sql = "UPDATE dogs SET name = ?, breed = ?  WHERE id = ?"
     DB[:conn].execute(sql, self.name, self.breed, self.id)
