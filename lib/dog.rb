@@ -38,7 +38,7 @@ attr_accessor :name, :breed, :id
   self
   end
 
-  def self.create(:name, :breed)
+  def self.create(name:, breed:)
 
   end
 end
